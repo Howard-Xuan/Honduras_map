@@ -21,6 +21,7 @@ Lago_de_Yojoa<-tibble(country="Honduras",subnational1="Cortes",subnational2="Lag
 Honduras<-rbind(Honduras,Lago_de_Yojoa)
 
 # Import geojson file and preliminary standardization
+# Geojson file obtained from https://data.humdata.org/ 
 Honduras_geo <- geojson_read("Honduras_adm2.geojson",
                            what = "sp") 
 Honduras_geo$shapeName<-stri_trans_general(Honduras_geo$shapeName,
